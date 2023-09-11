@@ -1,0 +1,151 @@
+.otp_form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-weight: bold;
+}
+
+#sign-in-button {
+    display: none;
+}
+
+.wrapper {
+    display: grid;
+    justify-content: center;
+    padding-top: 1rem;
+    color: whitesmoke;
+}
+.card_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    min-width: 600px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card_container2 {
+    margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    padding: 1%;
+    width: calc(100% - 2rem);
+}
+
+.box_top, .box_bottom {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.3rem;
+}
+
+/* .choose-button {
+    margin-top: -1rem;    
+} */
+
+.divider_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider_line {
+    height: 1px;
+    width: calc(50% - 100px);
+    background-color: #404040;
+    font-weight: bold;
+}
+
+.text {
+    margin: 0.5rem;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid #404040;
+    text-align: center;
+    line-height: 2.4rem;
+}
+
+.phone_button {
+    padding: 0.5rem;
+    text-align: center;
+    background-color: white;
+    color: black;
+    display: flex;
+    gap: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.signup {
+    margin: 1rem 0;
+}
+.signup h3 {
+    margin: 0;
+}
+
+.phone_button p {
+    margin: 0;
+}
+
+.otp {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 22px;
+    background-color: wheat;
+}
+.invalid-number-message {
+    top: -19px !important; 
+    left: 150px !important;
+    background: none !important;
+    color: #F87272 !important;
+    font-style: italic !important;
+    font-size: 1rem !important;
+}
+
+.phone_button:hover {
+    background-color: lightgreen;
+}
+
+.phone_button:disabled {
+    cursor: default;
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
+
+.msg_active {
+    background-color: #F87272;
+    border-radius: 10px;
+    margin-top: 0;
+    padding: 0.5rem;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.inactive {
+    display: none;
+}
+
+.email_btn {
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.inputStyle {
+    width: 2rem !important;
+    height: 2rem;
+    margin: 0.3rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
