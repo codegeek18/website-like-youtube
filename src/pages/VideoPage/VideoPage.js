@@ -48,11 +48,14 @@ const VideoPage = () => {
             <div className="container2_videoPage">
                 <div className='video_display_screen_videoPage'>
                     <video 
-                        src={`https://website-like-youtube-api.onrender.com/${vv.filePath}`}
+                        // src={`https://website-like-youtube-api.onrender.com/${vv.filePath}`}
+                        // src={vid.filePath}
                         className='video_ShowVideo_videoPage'
                         controls
                         autoPlay
-                    ></video>
+                    >
+                        <source src={vv.filePath} type='video/mp4'/>
+                    </video>
                     <div className="video_details_videoPage">
                         <div className="video_btns_title_VideoPage_container">
                             <p className='video_title_VideoPage'>{vv.videoTitle}</p>

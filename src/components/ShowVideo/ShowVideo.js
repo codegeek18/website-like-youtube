@@ -9,9 +9,10 @@ const ShowVideo = ({ vid }) => {
       <Link to={`/videopage/${vid?._id}`} style={{textDecoration: 'none'}}>
         <div>
             <video 
-                src={`https://website-like-youtube-api.onrender.com/${vid.filePath}`}
+                // src={`https://website-like-youtube-api.onrender.com/${vid.filePath}`}
                 className='video_ShowVideo'
             >
+              <source src={vid?.filePath}/>
             </video>
         </div>
         <div className="video_description">
