@@ -19,3 +19,13 @@
 .btn_nav_home:hover {
     background-color: rgb(128, 128, 128);
 }
+
+.videoLoader {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: fit-content;
+    margin: auto;
+    align-items: center;
+    margin-top: 2rem;
+}
