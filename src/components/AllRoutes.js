@@ -11,6 +11,7 @@ import Channel from '../pages/Channel/Channel'
 import Search from '../pages/Search/Search'
 import Login from '../pages/Login/Login'
 import SignUp from '../pages/Login/SignUp'
+import Subscriptions from '../pages/Subscriptions/Subscriptions'
 
 const AllRoutes = ({ setEditCreateChannelBtn, setVidUploadPage }) => {
   return (
@@ -31,6 +32,7 @@ const AllRoutes = ({ setEditCreateChannelBtn, setVidUploadPage }) => {
         />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
+        <Route path='/subscriptions' element={<Subscriptions />} />
     </Routes>
   )
 }

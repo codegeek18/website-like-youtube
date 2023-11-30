@@ -2,6 +2,7 @@ import React from 'react'
 import { FaEdit, FaUpload } from 'react-icons/fa';
 import './DescribeChannel.css';
 import { useSelector } from 'react-redux';
+import SubscribeBtn from '../VideoPage/SubscribeBtn';
 
 const DescribeChannel = ({ setEditCreateChannelBtn, Cid, setVidUploadPage }) => {
 
@@ -33,7 +34,9 @@ const DescribeChannel = ({ setEditCreateChannelBtn, Cid, setVidUploadPage }) => 
             </p>
         </>
         }
-        
+        <div className='channelpage_subscribe_btn'>
+            <SubscribeBtn vc={Cid} />
+        </div>
     </div>
   )
 }

@@ -5,6 +5,7 @@
   border-radius: 100%;
   background-color: rgb(224,227,214);
   display: flex;
+  cursor: pointer;
 }
 .fstChar_logo_App{
   margin: auto;
@@ -31,7 +32,9 @@
 }
 video {
   background-color: rgba(8,8,8,0.662);
+  border-radius: 2%;
 }
+
 .dot{
   height: 4px;
   width: 4px;

@@ -20,7 +20,7 @@ const LeftSidebar = () => {
           <img src={shorts} width={22} className='icon_sidebar' alt='S'/>
           <div className="text_sidebar_icon">Shorts</div>
         </NavLink>
-        <NavLink to='/' className="icon_sidebar_div">
+        <NavLink to='/subscriptions' className="icon_sidebar_div">
           <MdOutlineSubscriptions  size={22} className='icon_sidebar'/>
           <div className="text_sidebar_icon" style={{fontSize: "11px"}}>Subscriptions</div>
         </NavLink>

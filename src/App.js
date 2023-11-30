@@ -13,6 +13,7 @@ import { getAllLikedVideos } from './actions/likedVideo';
 import { getAllWatchLaterVideos } from './actions/watchLater';
 import { getAllHistory } from './actions/history';
 import { getAllComments } from './actions/comment';
+import { getAllSubscriptions } from './actions/subscribeChannel';
 
 function App() {
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ function App() {
     dispatch(getAllWatchLaterVideos());
     dispatch(getAllHistory());
     dispatch(getAllComments());
+    dispatch(getAllSubscriptions());
   }, [dispatch]);
 
   const [toggleDrawerSidebar, setToggleDrawerSidebar] = useState({

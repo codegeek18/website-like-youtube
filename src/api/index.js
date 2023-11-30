@@ -38,3 +38,7 @@ export const deleteComment = (id) => API.delete(`/comment/delete/${id}`, id);
 export const editComment = (id, commentBody) => API.patch(`/comment/edit/${id}`, {commentBody});
 export const getAllComments = () => API.get('/comment/get');
 
+
+export const addToSubscriptions = (subscribeData) => API.post('/subscriptions', subscribeData);
+export const getAllSubscriptions = () => API.get('/subscriptions');
+export const deleteSubscription = (ChannelSubscribed, Subscriber) => API.delete(`/subscriptions/${ChannelSubscribed}/${Subscriber}`);

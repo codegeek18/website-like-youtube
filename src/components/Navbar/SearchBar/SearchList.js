@@ -8,7 +8,7 @@ const SearchList = ({ titleArray, setSearchQuery }) => {
         <div className='Container_SearchList'>
             {
                 titleArray.map(title => (
-                    <p key={title} className='titleItem' onClick={(e) => setSearchQuery(title)}>
+                    <p key={title} className='titleItem' onClick={(e) => setSearchQuery(title)} tabIndex={0}>
                         <FaSearch style={{color: "grey"}}/>
                         {title}
                     </p>

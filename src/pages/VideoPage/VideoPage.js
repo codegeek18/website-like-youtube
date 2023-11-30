@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useCallback, useEffect } from 'react'
 import './VideoPage.css';
 import LikeWatchLaterSaveBtns from './LikeWatchLaterSaveBtns';
 import Comments from '../../components/Comments/Comments';
@@ -8,6 +8,7 @@ import moment from 'moment';
 import { addToHistory } from '../../actions/history';
 import { viewVideo } from '../../actions/video';
 import ShowVideoGrid from '../../components/ShowVideoGrid/ShowVideoGrid';
+import SubscribeBtn from './SubscribeBtn';
 
 const VideoPage = () => {
     const { vid } = useParams();
@@ -17,20 +18,29 @@ const VideoPage = () => {
 
     const currentUser = useSelector(state => state?.currentUserReducer);
     const dispatch = useDispatch();
-    const handleHistory = () => {
+    // const handleHistory = () => {
+    //     dispatch(
+    //         addToHistory({
+    //             videoId: vid,
+    //             Viewer: currentUser?.data?.result._id,
+    //         })
+    //     )
+    // };
+    const handleHistory = useCallback(() => {
         dispatch(
             addToHistory({
                 videoId: vid,
                 Viewer: currentUser?.data?.result._id,
             })
         )
-    };
+    }, [currentUser?.data?.result._id, dispatch, vid]);
 
-    const handleViews = () => {
+
+    const handleViews = useCallback(() => {
         dispatch(viewVideo({
             id: vid
         }))
-    }
+    }, [dispatch, vid])
 
     useEffect(() => {
         if (currentUser) {
@@ -40,7 +50,7 @@ const VideoPage = () => {
         else {
             handleViews();
         }
-    }, []);
+    }, [currentUser, handleHistory, handleViews]);
 
   return (
     <>
@@ -53,8 +63,10 @@ const VideoPage = () => {
                         className='video_ShowVideo_videoPage'
                         controls
                         autoPlay
+                        src={vv.filePath} 
+                        type='video/mp4'
                     >
-                        <source src={vv.filePath} type='video/mp4'/>
+                        {/* <source src={vv.filePath} type='video/mp4'/> */}
                     </video>
                     <div className="video_details_videoPage">
                         <div className="video_btns_title_VideoPage_container">
@@ -63,6 +75,7 @@ const VideoPage = () => {
                                 <div className="views_videoPage">
                                     {vv?.Views} views <div className='dot'></div> {moment(vv?.createdAt).fromNow()}
                                 </div>
+                                <SubscribeBtn vc={vv?.videoChannel} />
                                 <LikeWatchLaterSaveBtns vv={vv} vid={vid}/>
                             </div>
                         </div>
